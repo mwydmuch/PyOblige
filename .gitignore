@@ -2,6 +2,7 @@ Oblige_src/Oblige
 **.f
 **.o
 **.wad
+**.old
 
 __pycache__
 .idea
