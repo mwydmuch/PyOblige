@@ -269,7 +269,7 @@ def oblige_unique_vals(vals):
     return [x for x in vals if not (x in seen or seen.add(x))]
 
 
-def obligue_realpath(local_path):
+def oblige_realpath(local_path):
     return os.path.realpath(os.path.realpath(os.path.join(os.path.dirname(__file__), local_path)))
 
 
@@ -332,9 +332,10 @@ class DoomLevelGenerator(object):
         else:
             oblige_exe = "./Oblige"
             oblige_path = "Oblige_src/Oblige"
+
         oblige_dir = "Oblige_src"
 
-        if not os.path.exists(obligue_realpath(oblige_path)):
+        if not os.path.exists(oblige_realpath(oblige_path)):
             raise Exception("Oblige does not exists! Package is incomplete!")
 
         if verbose:
@@ -348,7 +349,7 @@ class DoomLevelGenerator(object):
 
         # Launch Oblige
         try:
-            oblige_process = subprocess.Popen(cmd, cwd=obligue_realpath(oblige_dir),  shell=True,
+            oblige_process = subprocess.Popen(cmd, cwd=oblige_realpath(oblige_dir), shell=True,
                                               stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
             results = oblige_process.communicate()[0]
             exit_code = oblige_process.returncode
