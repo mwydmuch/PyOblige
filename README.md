@@ -8,6 +8,35 @@ The main aim is to make it easier to use with [ViZDoom](https://github.com/mwydm
 It also adds 2 additional level sizes: `micro` and `tiny`. 
 
 ## Install
+
+### Dependencies:
+* g++ 
+* binutils
+* make
+* libfltk1.3-dev
+* libxft-dev
+* libxinerama-dev
+* libjpeg-dev
+* libpng-dev
+* zlib1g-dev
+* xdg-utils
+
+To install on Ubuntu use:
+```
+sudo apt install \
+                g++ \
+                binutils \
+                make \
+                libfltk1.3-dev \
+                libxft-dev \
+                libxinerama-dev \
+                libjpeg-dev \
+                libpng-dev \
+                zlib1g-dev \
+                xdg-utils 
+```
+
+### Pip package
 ```
 pip install oblige
 ```
