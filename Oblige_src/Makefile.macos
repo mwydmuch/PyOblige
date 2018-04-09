@@ -19,6 +19,8 @@ SCRIPT_DIR=$(PREFIX)/share/oblige
 
 CXX=g++
 
+MKDIR_P=@mkdir -p
+
 OBJ_DIR=obj_macos
 
 OPTIMISE=-O2
@@ -237,7 +239,7 @@ LANG_FILES= \
 
 #----- Targets ----------------------------------------------------
 
-all: $(PROGRAM)
+all: directories $(PROGRAM)
 
 $(PROGRAM): $(OBJS) $(LUA_OBJS) $(GLBSP_OBJS) $(AJPOLY_OBJS) $(PHYSFS_OBJS)
 	$(CXX) $^ -o $@ $(LDFLAGS) $(LIBS)
@@ -290,6 +292,8 @@ uninstall:
 	rm -v $(PREFIX)/bin/oblige
 	rm -Rv $(SCRIPT_DIR)
 
+directories:
+	${MKDIR_P} $(OBJ_DIR)/lua $(OBJ_DIR)/glbsp $(OBJ_DIR)/ajpoly $(OBJ_DIR)/physfs
 
 .PHONY: all clean halfclean stripped install uninstall
 

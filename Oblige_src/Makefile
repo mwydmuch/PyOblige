@@ -19,13 +19,14 @@ SCRIPT_DIR=$(PREFIX)/share/oblige
 
 CXX=g++
 
+MKDIR_P=@mkdir -p
+
 OBJ_DIR=obj_linux
 
 OPTIMISE=-O2
 
 # operating system choices: UNIX WIN32
 OS=UNIX
-
 
 #--- Internal stuff from here -----------------------------------
 
@@ -210,10 +211,11 @@ LANG_FILES= \
 
 #----- Targets ----------------------------------------------------
 
-all: $(PROGRAM)
+all: directories $(PROGRAM)
 
-$(PROGRAM): $(OBJS) $(LUA_OBJS) $(GLBSP_OBJS) $(AJPOLY_OBJS) $(PHYSFS_OBJS)
+$(PROGRAM):  $(OBJS) $(LUA_OBJS) $(GLBSP_OBJS) $(AJPOLY_OBJS) $(PHYSFS_OBJS)
 	$(CXX) -Wl,--warn-common $^ -o $@ $(LDFLAGS) $(LIBS)
+
 
 clean:
 	rm -f $(PROGRAM) $(OBJ_DIR)/*.o ERRS
@@ -272,7 +274,12 @@ uninstall:
 xgettext:
 	xgettext -o LANG_TEMPLATE.txt -k_ -kN_ -F -i --foreign-user --package-name="Oblige Level Maker" $(LANG_FILES)
 
+directories:
+	${MKDIR_P} $(OBJ_DIR)/lua $(OBJ_DIR)/glbsp $(OBJ_DIR)/ajpoly $(OBJ_DIR)/physfs
+
 .PHONY: all clean halfclean stripped install uninstall xgettext
+
+
 
 #--- editor settings ------------
 # vi:ts=8:sw=8:noexpandtab
