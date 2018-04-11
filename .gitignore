@@ -7,3 +7,5 @@ Oblige_src/Oblige
 __pycache__
 .idea
 .DS_Store
+dist
+oblige.egg-info

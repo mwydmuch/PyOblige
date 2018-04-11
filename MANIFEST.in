@@ -1,1 +1,1 @@
-recursive-include Oblige_src *
+recursive-include pyoblige/Oblige_src *
