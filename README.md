@@ -1,5 +1,4 @@
 # PyOblige
-
 [OBLIGE](http://oblige.sourceforge.net) is a random level generator 
 for the classic FPS game Doom by Andrew Apted and contributors.
 
@@ -62,7 +61,7 @@ generator.set_config({"key_to_update": "value"})
 number_of_generate_maps = generator.generate("name_of_wad_file")
 ```
 
-Example of usage with ViZDoom: [ViZDoom/examples/python/oblige.py](https://github.com/mwydmuch/ViZDoom/examples/python/oblige).
+Example of usage with ViZDoom: [ViZDoom/examples/python/oblige.py](https://github.com/mwydmuch/ViZDoom/blob/master/examples/python/pyoblige.py).
 
 
 ### Options
