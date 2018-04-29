@@ -32,12 +32,18 @@ class BuildCommand(build):
             raise
         build.run(self)
 
+# Python 3.5+ only
+#extra_files = [x for x in glob.glob("{}/**".format(oblige_src_path), recursive=True)]
 
-extra_files = [x for x in glob.glob("{}/**".format(oblige_src_path), recursive=True)]
+# Python 2.7 + Python 3 solution
+extra_files = []
+for root, dirnames, filenames in os.walk('{}/'.format(oblige_src_path)):
+    for filename in filenames:
+        extra_files.append(os.path.join(root, filename))
 
 setup(
     name='oblige',
-    version='0.1.1',
+    version='0.1.2',
     description='Level generator for DOOM',
     long_description="Level generator for DOOM. Wrapper for Oblige.",
     url='https://github.com/mwydmuch/PyOblige',

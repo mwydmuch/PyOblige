@@ -22,7 +22,7 @@ It also adds 2 additional level sizes: `micro` and `tiny`.
 
 To install on Ubuntu use:
 ```
-sudo apt install \
+sudo apt-get install \
                 g++ \
                 binutils \
                 make \
@@ -72,9 +72,7 @@ Example of usage with ViZDoom: [ViZDoom/examples/python/oblige.py](https://githu
 - `"game"`: `"doom2"`, `"doom"`
 - `"engine"`: `"zdoom"`, `"gzdoom"`, `"vizdoom"`
 - `"length"`: `"single"`, `"few"`, `"episode"`, `"game"`
-- `"theme"`: `"original"`, `"mostly_original"`, `"epi"`, `"mostly_epi"`, `"bit_mixed"`, `"jumble"`
-          `"tech"`, `"mostly_tech"`, `"urban"`, `"mostly_urban"`, `"hell"`, `"mostly_hell"`
-
+- `"theme"`: `"original"`, `"mostly_original"`, `"epi"`, `"mostly_epi"`, `"bit_mixed"`, `"jumble"`, `"tech"`, `"mostly_tech"`, `"urban"`, `"mostly_urban"`, `"hell"`, `"mostly_hell"`
 - `"size"`: `"micro"`, `"tiny"`, `"small"`, `"regular"`, `"large"`, `"extreme"`, `"epi"`, `"prog"`, `"mixed"`
 - `"outdoors"`: `"mixed"`, `"none"`, `"rare"`, `"few"`, `"less"`, `"some"`, `"more"`, `"heaps"`
 - `"caves"`: `"mixed"`, `"none"`, `"rare"`, `"few"`, `"less"`, `"some"`, `"more"`, `"heaps"`
@@ -82,14 +80,12 @@ Example of usage with ViZDoom: [ViZDoom/examples/python/oblige.py](https://githu
 - `"hallways"`: `"mixed"`, `"none"`, `"rare"`, `"few"`, `"less"`, `"some"`, `"more"`, `"heaps"`
 - `"teleporters"`: `"mixed"`, `"none"`, `"rare"`, `"few"`, `"less"`, `"some"`, `"more"`, `"heaps"`
 - `"steepness"`: `"mixed"`, `"none"`, `"rare"`, `"few"`, `"less"`, `"some"`, `"more"`, `"heaps"`
-
 - `"mons"`: `"scarce"`, `"few"`, `"less"`, `"some"`, `"more"`, `"nuts"`, `"mixed"`, `"none"`
 - `"strength"`: `"weak"`, `"easier"`, `"normal"`, `"harder"`, `"tough"`, `"crazy"`
 - `"ramp_up"`: `"slow"`, `"medium"`, `"fast"`, `"episodic"`
 - `"bosses"`: `"none"`, `"easier"`, `"normal"`, `"harder"`
 - `"traps"`: `"none"`, `"mixed"`, `"rare"`, `"few"`, `"less"`, `"some"`, `"more"`, `"heaps"`
 - `"cages"`: `"none"`, `"mixed"`, `"rare"`, `"few"`, `"less"`, `"some"`, `"more"`, `"heaps"`
-
 - `"health"`: `"none"`, `"scarce"`, `"less"`, `"bit_less"`, `"normal"`, `"bit_more"`, `"more"`, `"heaps"`
 - `"ammo"`: `"none"`, `"scarce"`, `"less"`, `"bit_less"`, `"normal"`, `"bit_more"`, `"more"`, `"heaps"`
 - `"weapons"`: `"none"`, `"very_soon"`, `"sooner"`, `"normal"`, `"later"`, `"very_late"`

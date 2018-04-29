@@ -344,8 +344,8 @@ class DoomLevelGenerator(object):
                   "\nOblige executable path: {}".format(config_path, wad_path, oblige_path))
 
         cmd = "{} --batch {} --load {} --keep".format(oblige_exe, wad_path, config_path)
-        # if verbose:
-        #    cmd += " --verbose"
+        if verbose:
+           cmd += " --verbose"
 
         # Launch Oblige
         try:
