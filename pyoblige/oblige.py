@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from __future__ import print_function
 import os
 import sys
@@ -339,11 +337,11 @@ class DoomLevelGenerator(object):
             raise Exception("Oblige does not exists! Package is incomplete!")
 
         if verbose:
-            print("Config text file path: {}"
-                  "\nOutput wad file path: {}"
-                  "\nOblige executable path: {}".format(config_path, wad_path, oblige_path))
+            print('Config text file path: "{}"'
+                  '\nOutput wad file path: "{}"'
+                  '\nOblige executable path: "{}"'.format(config_path, wad_path, oblige_path))
 
-        cmd = "{} --batch {} --load {} --keep".format(oblige_exe, wad_path, config_path)
+        cmd = '"{}" --batch "{}" --load "{}" --keep'.format(oblige_exe, wad_path, config_path)
         if verbose:
            cmd += " --verbose"
 
@@ -355,12 +353,13 @@ class DoomLevelGenerator(object):
             exit_code = oblige_process.returncode
 
         except subprocess.CalledProcessError:
-            raise Exception("Oblige failed to generate .wad file!\nExit code: {}\nLog:\n{}"
-                            .format(exit_code, results))
+            raise Exception("Oblige failed to generate .wad file!"
+                            "\nExit code: {}"
+                            "\nLog:\n{}".format(exit_code, results))
 
         if verbose:
-            print("Exit code: {}\n"
-                  "Oblige output:\n{}".format(exit_code, results))
+            print("Exit code: {}"
+                  "\nOblige output:\n{}".format(exit_code, results))
 
         # Parse results
         maps = 1

@@ -1,4 +1,3 @@
-
 test_wad = {
     "theme": "bit_mixed",
     "size": "micro",
