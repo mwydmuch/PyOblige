@@ -46,6 +46,14 @@ or install the newest version from the repository:
 pip install git+https://github.com/mwydmuch/PyOblige
 ```
 
+### Windows build
+
+For Windows we are providing a compiled package that can be download from releases page. To install it, copy `oblige` folder to `site-packages` folder.
+
+Location of `site-packages` depends on Python distribution:
+* Python: `python_root\Lib\site-packges`
+* Anaconda: `anaconda_root\lib\pythonX.X\site-packages`
+
 ## Usage
 
 ### Example
