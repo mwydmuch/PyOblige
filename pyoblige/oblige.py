@@ -292,10 +292,10 @@ class DoomLevelGenerator(object):
 
             # Check if provided config is correct
             if k not in oblige_options:
-                raise ValueError("Provided key {} is not valid Oblige option!".format(k))
+                raise ValueError("Provided key '{}' is not valid Oblige option!".format(k))
 
             if v not in oblige_options[k]:
-                raise ValueError("Provided value {} is not valid value of {}!\nAvailable values: "
+                raise ValueError("Provided value '{}' is not valid value of '{}'!\nAvailable values: {}"
                                  .format(v, k, oblige_unique_vals(oblige_options[k])))
 
             self.config[k] = v
