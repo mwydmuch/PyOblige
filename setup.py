@@ -43,7 +43,7 @@ for root, dirnames, filenames in os.walk('{}/'.format(oblige_src_path)):
 
 setup(
     name='oblige',
-    version='0.1.3',
+    version='0.1.4',
     description='Level generator for DOOM',
     long_description="Level generator for DOOM. Wrapper for Oblige.",
     url='https://github.com/mwydmuch/PyOblige',

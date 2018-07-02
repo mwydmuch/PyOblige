@@ -300,6 +300,9 @@ class DoomLevelGenerator(object):
 
             self.config[k] = v
 
+    def get_config(self):
+        return self.config
+
     def generate(self, wad_path, verbose=False):
         # Config preprocessing
         if self.config["engine"] == "vizdoom":
